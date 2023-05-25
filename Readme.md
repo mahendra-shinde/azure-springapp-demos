@@ -24,7 +24,7 @@
     $  az spring app create -n department-service -g spring-app-rg -s demo-2  --runtime-version Java_11
     $  az spring app create -n employee-service -g spring-app-rg -s demo-2  --runtime-version Java_11
     $  az spring app create -n organization-service -g spring-app-rg -s demo-2  --runtime-version Java_11
-    $  az spring app create -n gateway-service -g spring-app-rg -s demo-2  --runtime-version Java_11 --assign-public-endpoint
+    $  az spring app create -n gateway-service -g spring-app-rg -s demo-2  --runtime-version Java_11 
     ```
 
 1.  Now, lets deploy config server with Existing git repository (Public Repo!)
