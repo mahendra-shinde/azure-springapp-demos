@@ -1,7 +1,14 @@
+if "%1" == ""  goto setdefault
+
+set GOAL="%1"
+
+:setdefault
+set GOAL=clean package
+
 echo Building all modules 
-start mvn clean package -DskipTests -f config-service/
-start mvn clean package -DskipTests -f discovery-service/
-start mvn clean package -DskipTests -f employee-service/
-start mvn clean package -DskipTests -f department-service/
-start mvn clean package -DskipTests -f gateway-service/
-start mvn clean package -DskipTests -f organization-service/
+start mvn %GOAL%  -DskipTests -f config-service/
+start mvn %GOAL% -DskipTests -f discovery-service/
+start mvn %GOAL% -DskipTests -f employee-service/
+start mvn %GOAL% -DskipTests -f department-service/
+start mvn %GOAL%  -DskipTests -f gateway-service/
+start mvn %GOAL%  -DskipTests -f organization-service/
